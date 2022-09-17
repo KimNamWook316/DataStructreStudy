@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="01. Stack">
+      <UniqueIdentifier>{86c55d2a-1ae6-4907-9529-1bd17467b331}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02. Queue">
+      <UniqueIdentifier>{cc74851b-ff15-463a-b54f-a935a9c533b2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="03. Deque">
+      <UniqueIdentifier>{b46d1ff7-271b-4f78-bf63-ef106e4746d8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="04. List">
+      <UniqueIdentifier>{abf68cce-70aa-42ce-bfd7-42c2d622256d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="04. List\01. DoubleLinkedList">
+      <UniqueIdentifier>{83e8e0ef-dac5-46f1-ac36-67e90eb54647}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="05. Tree">
+      <UniqueIdentifier>{b64ff16b-6f45-4e45-a487-c5c6dfc1d3d9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="05. Tree\01. Thread">
+      <UniqueIdentifier>{88db60d4-13e2-4e01-ade6-744661dcd577}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="LinkedStack.h">
+      <Filter>01. Stack</Filter>
+    </ClInclude>
+    <ClInclude Include="ArrayStack.h">
+      <Filter>01. Stack</Filter>
+    </ClInclude>
+    <ClInclude Include="Node.h">
+      <Filter>01. Stack</Filter>
+    </ClInclude>
+    <ClInclude Include="CircleQueue.h">
+      <Filter>02. Queue</Filter>
+    </ClInclude>
+    <ClInclude Include="LinkedQueue.h">
+      <Filter>02. Queue</Filter>
+    </ClInclude>
+    <ClInclude Include="CircleDeque.h">
+      <Filter>03. Deque</Filter>
+    </ClInclude>
+    <ClInclude Include="DoubleLinkedList.h">
+      <Filter>04. List\01. DoubleLinkedList</Filter>
+    </ClInclude>
+    <ClInclude Include="DoubleLinkNode.h">
+      <Filter>04. List\01. DoubleLinkedList</Filter>
+    </ClInclude>
+    <ClInclude Include="BraketChecker.h">
+      <Filter>01. Stack</Filter>
+    </ClInclude>
+    <ClInclude Include="BinaryNode.h">
+      <Filter>05. Tree</Filter>
+    </ClInclude>
+    <ClInclude Include="BinaryTree.h">
+      <Filter>05. Tree</Filter>
+    </ClInclude>
+    <ClInclude Include="ThreadBTNode.h">
+      <Filter>05. Tree\01. Thread</Filter>
+    </ClInclude>
+    <ClInclude Include="ThreadBinaryTree.h">
+      <Filter>05. Tree\01. Thread</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ArrayStack.cpp">
+      <Filter>01. Stack</Filter>
+    </ClCompile>
+    <ClCompile Include="Node.cpp">
+      <Filter>01. Stack</Filter>
+    </ClCompile>
+    <ClCompile Include="LinkedStack.cpp">
+      <Filter>01. Stack</Filter>
+    </ClCompile>
+    <ClCompile Include="CircleQueue.cpp">
+      <Filter>02. Queue</Filter>
+    </ClCompile>
+    <ClCompile Include="LinkedQueue.cpp">
+      <Filter>02. Queue</Filter>
+    </ClCompile>
+    <ClCompile Include="CircleDeque.cpp">
+      <Filter>03. Deque</Filter>
+    </ClCompile>
+    <ClCompile Include="DoubleLinkedList.cpp">
+      <Filter>04. List\01. DoubleLinkedList</Filter>
+    </ClCompile>
+    <ClCompile Include="DoubleLinkNode.cpp">
+      <Filter>04. List\01. DoubleLinkedList</Filter>
+    </ClCompile>
+    <ClCompile Include="BraketChecker.cpp">
+      <Filter>01. Stack</Filter>
+    </ClCompile>
+    <ClCompile Include="BinaryNode.cpp">
+      <Filter>05. Tree</Filter>
+    </ClCompile>
+    <ClCompile Include="BinaryTree.cpp">
+      <Filter>05. Tree</Filter>
+    </ClCompile>
+    <ClCompile Include="ThreadBTNode.cpp">
+      <Filter>05. Tree\01. Thread</Filter>
+    </ClCompile>
+    <ClCompile Include="ThreadBinaryTree.cpp">
+      <Filter>05. Tree\01. Thread</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
