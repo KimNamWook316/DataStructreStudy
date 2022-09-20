@@ -157,3 +157,107 @@ int CBinaryNode::IsLeaf()
 	else
 		return false;
 }
+
+bool CBinaryNode::IsBalanced()
+{
+	bool balanced = true;
+
+	int rLevel = 0;
+	int lLevel = 0;
+
+	if (m_Left)
+		lLevel = m_Left->GetLevel();
+
+	if (m_Right)
+		rLevel = m_Right->GetLevel();
+
+	// 레벨차가 2 이상으로 나는 경우
+	if (abs(lLevel - rLevel) > 1)
+		return false;
+
+	// 자식 노드도 판별한다.
+	if (m_Left)
+		balanced = m_Left->IsBalanced();
+
+	if (!balanced)
+		return false;
+
+	if (m_Right)
+		balanced = m_Right->IsBalanced();
+
+	return true;
+}
+
+int CBinaryNode::GetPathLength(int Level)
+{
+	std::cout << " Data : " << m_Data << " ";
+
+	if (!m_Left && !m_Right)
+		return 0;
+
+	if (m_Left && m_Right)
+		return ((Level * 2) + m_Left->GetPathLength(Level + 1) + m_Right->GetPathLength(Level + 1));
+
+	if (m_Left)
+		return Level + m_Left->GetPathLength(Level + 1);
+
+	if (m_Right)
+		return Level + m_Right->GetPathLength(Level + 1);
+}
+
+bool CBinaryNode::Swap()
+{
+	bool swap = true;
+
+	if (m_Left)
+		swap = m_Left->Swap();
+
+	if (m_Right)
+		swap = m_Right->Swap();
+
+	CBinaryNode* temp = m_Left;
+	m_Left = m_Right;
+	m_Right = temp;
+
+	return true;
+}
+
+void CBinaryNode::GetAllNode(std::list<CBinaryNode*>& outList)
+{
+	outList.push_back(this);
+
+	if (m_Left)
+		m_Left->GetAllNode(outList);
+
+	if (m_Right)
+		m_Right->GetAllNode(outList);
+}
+
+bool CBinaryNode::IsValid()
+{
+	if (!m_Left && !m_Right)
+		return true;
+
+	if (m_Left && m_Right)
+	{
+	}
+
+	if (m_Left)
+		return m_Left->IsValid();
+
+	if (m_Right)
+		return m_Right->IsValid();
+
+	return false;
+}
+
+CBinaryNode* CBinaryNode::SearchRecursive(char key)
+{
+	if (key == m_Data)
+		return this;
+
+	if (key < m_Data)
+		return m_Left->SearchRecursive(key);
+	else
+		return m_Right->SearchRecursive(key);
+}

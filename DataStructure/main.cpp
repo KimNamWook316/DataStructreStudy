@@ -117,6 +117,7 @@ void TestBracketCheck()
 void TestBinaryTree()
 {
 	CBinaryTree binTree;
+	CBinaryTree binTree2;
 
 	CBinaryNode* a = new CBinaryNode('A');
 	CBinaryNode* b = new CBinaryNode('B');
@@ -133,9 +134,41 @@ void TestBinaryTree()
 
 	binTree.SetRoot(a);
 
+	CBinaryNode* g = new CBinaryNode('G');
+	g->SetLeft(f);
+	binTree2.SetRoot(g);
+
 	std::string full = binTree.IsFull() ? "full" : "not full";
 
 	std::cout << "Tree is " << full << '\n';
+
+	int level = binTree.GetLevel(b);
+	std::cout << "node f level : " << level << '\n';
+
+	bool balanced = binTree.IsBalanced();
+	std::cout << "Tree Balanced : " << std::boolalpha << balanced << '\n';
+
+	int pathLength = binTree.GetPathLength();
+	std::cout << "Tree Path Length : " << pathLength << '\n';
+
+	bool swap = binTree.Reverse();
+	std::cout << "After Reverse\n";
+
+	binTree.LevelOrder();
+
+	bool disjoint = binTree.IsDisjointFrom(&binTree2);
+	std::cout << "tree disjoint from tree2 is : " << std::boolalpha << disjoint << '\n';
+
+	bool valid = binTree.IsValid();
+	std::cout << "tree 1 valid : " << std::boolalpha << valid << '\n';
+
+	delete a;
+	delete b;
+	delete c;
+	delete d;
+	delete e;
+	delete f;
+	delete g;
 }
 
 void TestThreadBinaryTree()

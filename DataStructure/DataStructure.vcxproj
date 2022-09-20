@@ -143,6 +143,7 @@
     <ClInclude Include="ArrayStack.h" />
     <ClInclude Include="BinaryNode.h" />
     <ClInclude Include="BinaryTree.h" />
+    <ClInclude Include="BinSrchTree.h" />
     <ClInclude Include="BraketChecker.h" />
     <ClInclude Include="CircleDeque.h" />
     <ClInclude Include="CircleQueue.h" />
@@ -158,6 +159,7 @@
     <ClCompile Include="ArrayStack.cpp" />
     <ClCompile Include="BinaryNode.cpp" />
     <ClCompile Include="BinaryTree.cpp" />
+    <ClCompile Include="BinSrchTree.cpp" />
     <ClCompile Include="BraketChecker.cpp" />
     <ClCompile Include="CircleDeque.cpp" />
     <ClCompile Include="CircleQueue.cpp" />

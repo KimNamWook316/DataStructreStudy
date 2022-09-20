@@ -6,7 +6,7 @@ class CBinaryTree
 {
 public:
 	CBinaryTree();
-	~CBinaryTree();
+	virtual ~CBinaryTree();
 
 public:
 	void SetRoot(CBinaryNode* root);
@@ -19,14 +19,19 @@ public:
 	void PreOrder();
 	void PostOrder();
 	bool IsFull();
-	int GetLevel();
+	int GetLevel(CBinaryNode* node);
 	bool IsBalanced();
 	int GetPathLength();
 	bool Reverse();
 	bool IsDisjointFrom(CBinaryTree* tree);
 	bool IsValid();
+	void GetAllNodes(std::list<CBinaryNode*>& outNodeList);
+	bool Include(CBinaryNode* node);
 
-private:
+public:
+	bool IsEmpty() const;
+
+protected:
 	CBinaryNode* m_Root;
 };
 

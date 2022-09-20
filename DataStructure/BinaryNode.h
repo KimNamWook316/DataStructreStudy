@@ -1,5 +1,7 @@
 #pragma once
 
+#include <list>
+
 class CBinaryNode
 {
 public:
@@ -31,6 +33,14 @@ public:
 	int GetLeafCount();
 	int GetLevel();
 	int IsLeaf();
+
+	bool IsBalanced();
+	int GetPathLength(int Level);
+	bool Swap();
+	void GetAllNode(std::list<CBinaryNode*>& outList);
+	bool IsValid();
+
+	CBinaryNode* SearchRecursive(char Key);
 
 private:
 	char m_Data;

@@ -30,6 +30,12 @@
     <Filter Include="05. Tree\01. Thread">
       <UniqueIdentifier>{88db60d4-13e2-4e01-ade6-744661dcd577}</UniqueIdentifier>
     </Filter>
+    <Filter Include="05. Tree\00. BinTree">
+      <UniqueIdentifier>{5f54f7cc-8d29-4764-b35f-a81299763d32}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="05. Tree\02. BST">
+      <UniqueIdentifier>{309abf2d-0488-4fb6-96a1-ca2820f19887}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="LinkedStack.h">
@@ -59,17 +65,20 @@
     <ClInclude Include="BraketChecker.h">
       <Filter>01. Stack</Filter>
     </ClInclude>
-    <ClInclude Include="BinaryNode.h">
-      <Filter>05. Tree</Filter>
-    </ClInclude>
-    <ClInclude Include="BinaryTree.h">
-      <Filter>05. Tree</Filter>
-    </ClInclude>
     <ClInclude Include="ThreadBTNode.h">
       <Filter>05. Tree\01. Thread</Filter>
     </ClInclude>
     <ClInclude Include="ThreadBinaryTree.h">
       <Filter>05. Tree\01. Thread</Filter>
+    </ClInclude>
+    <ClInclude Include="BinaryNode.h">
+      <Filter>05. Tree\00. BinTree</Filter>
+    </ClInclude>
+    <ClInclude Include="BinaryTree.h">
+      <Filter>05. Tree\00. BinTree</Filter>
+    </ClInclude>
+    <ClInclude Include="BinSrchTree.h">
+      <Filter>05. Tree\02. BST</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -103,17 +112,20 @@
     <ClCompile Include="BraketChecker.cpp">
       <Filter>01. Stack</Filter>
     </ClCompile>
-    <ClCompile Include="BinaryNode.cpp">
-      <Filter>05. Tree</Filter>
-    </ClCompile>
-    <ClCompile Include="BinaryTree.cpp">
-      <Filter>05. Tree</Filter>
-    </ClCompile>
     <ClCompile Include="ThreadBTNode.cpp">
       <Filter>05. Tree\01. Thread</Filter>
     </ClCompile>
     <ClCompile Include="ThreadBinaryTree.cpp">
       <Filter>05. Tree\01. Thread</Filter>
+    </ClCompile>
+    <ClCompile Include="BinaryNode.cpp">
+      <Filter>05. Tree\00. BinTree</Filter>
+    </ClCompile>
+    <ClCompile Include="BinaryTree.cpp">
+      <Filter>05. Tree\00. BinTree</Filter>
+    </ClCompile>
+    <ClCompile Include="BinSrchTree.cpp">
+      <Filter>05. Tree\02. BST</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
