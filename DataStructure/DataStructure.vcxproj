@@ -147,6 +147,8 @@
     <ClInclude Include="BraketChecker.h" />
     <ClInclude Include="CircleDeque.h" />
     <ClInclude Include="CircleQueue.h" />
+    <ClInclude Include="DicRecord.h" />
+    <ClInclude Include="Dictionary.h" />
     <ClInclude Include="DoubleLinkedList.h" />
     <ClInclude Include="DoubleLinkNode.h" />
     <ClInclude Include="LinkedQueue.h" />
@@ -163,6 +165,8 @@
     <ClCompile Include="BraketChecker.cpp" />
     <ClCompile Include="CircleDeque.cpp" />
     <ClCompile Include="CircleQueue.cpp" />
+    <ClCompile Include="DicRecord.cpp" />
+    <ClCompile Include="Dictionary.cpp" />
     <ClCompile Include="DoubleLinkedList.cpp" />
     <ClCompile Include="DoubleLinkNode.cpp" />
     <ClCompile Include="LinkedQueue.cpp" />

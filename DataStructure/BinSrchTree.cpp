@@ -1,3 +1,4 @@
+#include <iostream>
 #include "BinSrchTree.h"
 
 CBinSrchTree::CBinSrchTree()
@@ -19,17 +20,23 @@ CBinaryNode* CBinSrchTree::SearchRecursive(char key)
 CBinaryNode* CBinSrchTree::SearchIterative(char key)
 {
 	if (!m_Root)
+	{
+		std::cout << "Key값이 " << static_cast<int>(key) << "인 노드 없음\n";
 		return nullptr;
+	}
 
 	CBinaryNode* node = m_Root;
 
 	while (node)
 	{
 		if (node->GetData() == key)
+		{
+			std::cout << "Key값이 " << static_cast<int>(key) << "인 노드 : " << &node << '\n';
 			return node;
+		}
 		else
 		{
-			if (node->GetData() < key)
+			if (node->GetData() > key)
 			{
 				node = node->GetLeft();
 			}
@@ -40,11 +47,18 @@ CBinaryNode* CBinSrchTree::SearchIterative(char key)
 		}
 	}
 
+		std::cout << "Key값이 " << static_cast<int>(key) << "인 노드 없음\n";
 	return nullptr;
 }
 
 bool CBinSrchTree::Insert(CBinaryNode* node)
 {
+	if (!m_Root)
+	{
+		m_Root = node;
+		return true;
+	}
+
 	CBinaryNode* curNode = m_Root;
 
 	while (curNode)
@@ -55,26 +69,32 @@ bool CBinSrchTree::Insert(CBinaryNode* node)
 		{
 			if (node->GetData() < curNode->GetData())
 			{
-				curNode = curNode->GetLeft();
-
-				if (!curNode)
+				if (!curNode->GetLeft())
 				{
-					curNode = node;
+					curNode->SetLeft(node);
 					break;
+				}
+				else
+				{
+					curNode = curNode->GetLeft();
 				}
 			}
 			else
 			{
-				curNode = curNode->GetRight();
-
-				if (!curNode)
+				if (!curNode->GetRight())
 				{
-					curNode = node;
+					curNode->SetRight(node);
 					break;
+				}
+				else 
+				{
+					curNode = curNode->GetRight();
 				}
 			}
 		}
 	}
+
+	return true;
 }
 
 bool CBinSrchTree::Remove(char data)
@@ -125,7 +145,7 @@ bool CBinSrchTree::Remove(char data)
 				CBinaryNode* replace = curNode->GetRight();
 				CBinaryNode* replaceParent = curNode;
 
-				while (!replace->GetLeft())
+				while (replace->GetLeft())
 				{
 					replaceParent = replace;
 					replace = replace->GetLeft();
@@ -136,14 +156,23 @@ bool CBinSrchTree::Remove(char data)
 				if (replace != curNode->GetRight())
 					replaceParent->SetLeft(replace->GetRight());
 
-				if (parent->GetLeft() == curNode)
+				if (!parent)
+					m_Root = replace;
+				else if (parent->GetLeft() == curNode)
 					parent->SetLeft(replace);
 				else
 					parent->SetRight(replace);
+
+				if (curNode->GetLeft() != replace)
+					replace->SetLeft(curNode->GetLeft());
+				if (curNode->GetRight() != replace)
+					replace->SetRight(curNode->GetRight());
 			}
 
 			delete curNode;
 			curNode = nullptr;
+
+			return true;
 		}
 		else
 		{
@@ -155,4 +184,6 @@ bool CBinSrchTree::Remove(char data)
 				curNode = curNode->GetRight();
 		}
 	}
+
+	return false;
 }

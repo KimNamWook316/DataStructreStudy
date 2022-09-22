@@ -8,16 +8,20 @@
 #include "BraketChecker.h"
 #include "BinaryTree.h"
 #include "ThreadBinaryTree.h"
+#include "BinSrchTree.h"
+#include "Dictionary.h":
 
 void TestCircleDeque();
 void TestDoubleLinkedList();
 void TestBracketCheck();
 void TestBinaryTree();
 void TestThreadBinaryTree();
+void TestBinarySearchTree();
+void TestDictionary();
 
 int main()
 {
-	TestBinaryTree();
+	TestDictionary();
 
 	return 0;
 }
@@ -209,4 +213,134 @@ void TestThreadBinaryTree()
 	delete n7;
 	delete n8;
 	delete n9;
+}
+
+void TestBinarySearchTree()
+{
+	CBinSrchTree tree;
+
+	tree.Insert(new CBinaryNode(35));
+	tree.Insert(new CBinaryNode(18));
+	tree.Insert(new CBinaryNode(7));
+	tree.Insert(new CBinaryNode(26));
+	tree.Insert(new CBinaryNode(12));
+	tree.Insert(new CBinaryNode(3));
+	tree.Insert(new CBinaryNode(68));
+	tree.Insert(new CBinaryNode(22));
+	tree.Insert(new CBinaryNode(30));
+	tree.Insert(new CBinaryNode(99));
+
+	std::cout << "노드의 개수 : " << tree.GetCount() << '\n';
+	std::cout << "단말의 개수 : " << tree.GetLeafCount() << '\n';
+	std::cout << "트리의 높이 : " << tree.GetHeight() << '\n';
+
+	// 순회
+	tree.InOrder();
+	tree.PreOrder();
+	tree.PostOrder();
+	tree.LevelOrder();
+
+	// 탐색
+	tree.SearchIterative(26);
+	tree.SearchRecursive(25);
+
+	// 삭제
+	std::cout << "Case 1 : Node 3 삭제\n";
+	tree.Remove(3);
+	tree.LevelOrder();
+
+	std::cout << "Case 2 : Node 68 삭제\n";
+	tree.Remove(68);
+	tree.LevelOrder();
+
+	std::cout << "Case 3 : Node 18 삭제\n";
+	tree.Remove(18);
+	tree.LevelOrder();
+
+	std::cout << "Case 4 : Node 35 삭제\n";
+	tree.Remove(35);
+	tree.LevelOrder();
+
+	std::cout << "노드의 개수 : " << tree.GetCount() << '\n';
+	std::cout << "단말의 개수 : " << tree.GetLeafCount() << '\n';
+	std::cout << "트리의 높이 : " << tree.GetHeight() << '\n';
+}
+
+void TestDictionary()
+{
+	CDictionary dic;
+
+	char input = 0;
+
+	bool dicSuccess = true;
+	std::string word = "";
+	std::string mean = "";
+
+	while (input != 'q')
+	{
+		if (std::cin.fail())
+		{
+			std::cin.clear();
+			std::cin.ignore(100, '\n');
+		}
+
+		std::cout << "[사용법] " << "i-추가 d-삭제 w-단어검색 p-출력 q-종료 >>";
+
+		std::cin >> input;
+
+		if (input == 'i')
+		{
+			std::cout << "\n삽입 단어 : ";
+			std::cin >> word;
+			std::cout << "\n단어 설명 : ";
+			std::cin >> mean;
+
+			dicSuccess = dic.Insert(word, mean);
+
+			if (!dicSuccess)
+			{
+				std::cout << "단어 삽입 실패 : 중복된 단어" << std::endl;
+			}
+		}
+		else if (input == 'd')
+		{
+			std::cout << "\n삭제 단어 : ";
+			std::cin >> word;
+
+			dicSuccess = dic.Remove(word);
+
+			if (!dicSuccess)
+			{
+				std::cout << "단어 삭제 실패 : 삭제하려는 단어가 없음" << std::endl;
+			}
+		}
+		else if (input == 'w')
+		{
+			std::cout << "\n찾으려는 단어 : ";
+			std::cin >> word;
+
+			CDicRecord* find = dic.SearchWord(word);
+
+			if (find)
+			{
+				find->Display();
+			}
+			else
+			{
+				std::cout << "단어 검색 실패 : 단어가 없음" << std::endl;
+			}
+		}
+		else if (input == 'p')
+		{
+			dic.PrintRecord();
+		}
+		else if (input == 'q')
+		{
+			std::cout << "종료" << std::endl;
+		}
+		else
+		{
+			std::cout << "잘못된 명령어" << std::endl;
+		}
+	}
 }

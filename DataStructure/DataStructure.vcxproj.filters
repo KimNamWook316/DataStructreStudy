@@ -36,6 +36,9 @@
     <Filter Include="05. Tree\02. BST">
       <UniqueIdentifier>{309abf2d-0488-4fb6-96a1-ca2820f19887}</UniqueIdentifier>
     </Filter>
+    <Filter Include="05. Tree\02. BST\01. Dictionary">
+      <UniqueIdentifier>{2f33742e-1879-4b65-97cb-bba3f06540c1}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="LinkedStack.h">
@@ -79,6 +82,12 @@
     </ClInclude>
     <ClInclude Include="BinSrchTree.h">
       <Filter>05. Tree\02. BST</Filter>
+    </ClInclude>
+    <ClInclude Include="DicRecord.h">
+      <Filter>05. Tree\02. BST\01. Dictionary</Filter>
+    </ClInclude>
+    <ClInclude Include="Dictionary.h">
+      <Filter>05. Tree\02. BST\01. Dictionary</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -126,6 +135,12 @@
     </ClCompile>
     <ClCompile Include="BinSrchTree.cpp">
       <Filter>05. Tree\02. BST</Filter>
+    </ClCompile>
+    <ClCompile Include="DicRecord.cpp">
+      <Filter>05. Tree\02. BST\01. Dictionary</Filter>
+    </ClCompile>
+    <ClCompile Include="Dictionary.cpp">
+      <Filter>05. Tree\02. BST\01. Dictionary</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

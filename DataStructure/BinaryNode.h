@@ -7,6 +7,7 @@ class CBinaryNode
 public:
 	CBinaryNode();
 	CBinaryNode(char data);
+	virtual ~CBinaryNode();
 
 public:
 	void SetData(char data)

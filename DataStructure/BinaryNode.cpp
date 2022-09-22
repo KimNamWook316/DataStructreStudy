@@ -15,6 +15,10 @@ CBinaryNode::CBinaryNode(char data) :
 	m_Data = data;
 }
 
+CBinaryNode::~CBinaryNode()
+{
+}
+
 CBinaryNode* CBinaryNode::GetLeft()
 {
 	return m_Left;
@@ -37,7 +41,7 @@ void CBinaryNode::SetRight(CBinaryNode* node)
 
 void CBinaryNode::Print()
 {
-	printf("[%c] ", m_Data);
+	printf("[%d] ", m_Data);
 }
 
 void CBinaryNode::InOrder()
@@ -47,7 +51,7 @@ void CBinaryNode::InOrder()
 		m_Left->InOrder();
 	}
 
-	printf("[%c] ", m_Data);
+	printf("[%d] ", m_Data);
 
 	if (m_Right)
 	{
@@ -57,7 +61,7 @@ void CBinaryNode::InOrder()
 
 void CBinaryNode::PreOrder()
 {
-	printf("[%c] ", m_Data);
+	printf("[%d] ", m_Data);
 
 	if (m_Left)
 	{
@@ -80,7 +84,7 @@ void CBinaryNode::PostOrder()
 		m_Right->PostOrder();
 	}
 
-	printf("[%c] ", m_Data);
+	printf("[%d] ", m_Data);
 }
 
 int CBinaryNode::GetCount()
@@ -257,7 +261,25 @@ CBinaryNode* CBinaryNode::SearchRecursive(char key)
 		return this;
 
 	if (key < m_Data)
-		return m_Left->SearchRecursive(key);
+	{
+		if (!m_Left)
+		{
+			std::cout << "Key값이 " << static_cast<int>(key) << "인 노드 없음\n";
+		}
+		else
+		{
+			return m_Left->SearchRecursive(key);
+		}
+	}
 	else
-		return m_Right->SearchRecursive(key);
+	{
+		if (!m_Right)
+		{
+			std::cout << "Key값이 " << static_cast<int>(key) << "인 노드 없음\n";
+		}
+		else
+		{
+			return m_Right->SearchRecursive(key);
+		}
+	}
 }
