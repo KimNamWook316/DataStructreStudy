@@ -47,7 +47,7 @@ CBinaryNode* CBinSrchTree::SearchIterative(char key)
 		}
 	}
 
-		std::cout << "Key값이 " << static_cast<int>(key) << "인 노드 없음\n";
+	std::cout << "Key값이 " << static_cast<int>(key) << "인 노드 없음\n";
 	return nullptr;
 }
 

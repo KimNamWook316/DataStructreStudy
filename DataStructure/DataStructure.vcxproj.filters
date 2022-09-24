@@ -39,6 +39,9 @@
     <Filter Include="05. Tree\02. BST\01. Dictionary">
       <UniqueIdentifier>{2f33742e-1879-4b65-97cb-bba3f06540c1}</UniqueIdentifier>
     </Filter>
+    <Filter Include="05. Tree\03. Heap">
+      <UniqueIdentifier>{6b9c799c-e571-4eac-afd3-5263e69d7bdc}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="LinkedStack.h">
@@ -88,6 +91,12 @@
     </ClInclude>
     <ClInclude Include="Dictionary.h">
       <Filter>05. Tree\02. BST\01. Dictionary</Filter>
+    </ClInclude>
+    <ClInclude Include="HeapNode.h">
+      <Filter>05. Tree\03. Heap</Filter>
+    </ClInclude>
+    <ClInclude Include="MaxHeap.h">
+      <Filter>05. Tree\03. Heap</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -141,6 +150,12 @@
     </ClCompile>
     <ClCompile Include="Dictionary.cpp">
       <Filter>05. Tree\02. BST\01. Dictionary</Filter>
+    </ClCompile>
+    <ClCompile Include="HeapNode.cpp">
+      <Filter>05. Tree\03. Heap</Filter>
+    </ClCompile>
+    <ClCompile Include="MaxHeap.cpp">
+      <Filter>05. Tree\03. Heap</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

@@ -151,8 +151,10 @@
     <ClInclude Include="Dictionary.h" />
     <ClInclude Include="DoubleLinkedList.h" />
     <ClInclude Include="DoubleLinkNode.h" />
+    <ClInclude Include="HeapNode.h" />
     <ClInclude Include="LinkedQueue.h" />
     <ClInclude Include="LinkedStack.h" />
+    <ClInclude Include="MaxHeap.h" />
     <ClInclude Include="Node.h" />
     <ClInclude Include="ThreadBinaryTree.h" />
     <ClInclude Include="ThreadBTNode.h" />
@@ -169,9 +171,11 @@
     <ClCompile Include="Dictionary.cpp" />
     <ClCompile Include="DoubleLinkedList.cpp" />
     <ClCompile Include="DoubleLinkNode.cpp" />
+    <ClCompile Include="HeapNode.cpp" />
     <ClCompile Include="LinkedQueue.cpp" />
     <ClCompile Include="LinkedStack.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="MaxHeap.cpp" />
     <ClCompile Include="Node.cpp" />
     <ClCompile Include="ThreadBinaryTree.cpp" />
     <ClCompile Include="ThreadBTNode.cpp" />

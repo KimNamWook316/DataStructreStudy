@@ -10,6 +10,7 @@
 #include "ThreadBinaryTree.h"
 #include "BinSrchTree.h"
 #include "Dictionary.h":
+#include "MaxHeap.h"
 
 void TestCircleDeque();
 void TestDoubleLinkedList();
@@ -18,10 +19,11 @@ void TestBinaryTree();
 void TestThreadBinaryTree();
 void TestBinarySearchTree();
 void TestDictionary();
+void TestHeap();
 
 int main()
 {
-	TestDictionary();
+	TestHeap();
 
 	return 0;
 }
@@ -343,4 +345,26 @@ void TestDictionary()
 			std::cout << "잘못된 명령어" << std::endl;
 		}
 	}
+}
+
+void TestHeap()
+{
+	CMaxHeap heap;
+
+	// Insertion
+	heap.Insert(10);
+	heap.Insert(5);
+	heap.Insert(30);
+	heap.Insert(8);
+	heap.Insert(9);
+	heap.Insert(3);
+	heap.Insert(7);
+	heap.Display();
+
+	// Display
+	heap.Remove();
+	heap.Remove();
+	heap.Remove();
+	heap.Remove();
+	heap.Display();
 }
