@@ -42,6 +42,15 @@
     <Filter Include="05. Tree\03. Heap">
       <UniqueIdentifier>{6b9c799c-e571-4eac-afd3-5263e69d7bdc}</UniqueIdentifier>
     </Filter>
+    <Filter Include="06. LinkedList">
+      <UniqueIdentifier>{0559d15f-12e1-4fdb-bcb0-32b72b8b1122}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="06. LinkedList\01. Circular Double">
+      <UniqueIdentifier>{4df0618a-fca3-47d7-96bd-bdf9b47edb8e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="05. Tree\04. RedBlackTree">
+      <UniqueIdentifier>{d12e2839-08ee-408d-9828-7eb598767160}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="LinkedStack.h">
@@ -97,6 +106,18 @@
     </ClInclude>
     <ClInclude Include="MaxHeap.h">
       <Filter>05. Tree\03. Heap</Filter>
+    </ClInclude>
+    <ClInclude Include="MinHeap.h">
+      <Filter>05. Tree\03. Heap</Filter>
+    </ClInclude>
+    <ClInclude Include="CDLL.h">
+      <Filter>06. LinkedList\01. Circular Double</Filter>
+    </ClInclude>
+    <ClInclude Include="RedBlackNode.h">
+      <Filter>05. Tree\04. RedBlackTree</Filter>
+    </ClInclude>
+    <ClInclude Include="RedBlackTree.h">
+      <Filter>05. Tree\04. RedBlackTree</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -156,6 +177,18 @@
     </ClCompile>
     <ClCompile Include="MaxHeap.cpp">
       <Filter>05. Tree\03. Heap</Filter>
+    </ClCompile>
+    <ClCompile Include="MinHeap.cpp">
+      <Filter>05. Tree\03. Heap</Filter>
+    </ClCompile>
+    <ClCompile Include="CDLL.cpp">
+      <Filter>06. LinkedList\01. Circular Double</Filter>
+    </ClCompile>
+    <ClCompile Include="RedBlackNode.cpp">
+      <Filter>05. Tree\04. RedBlackTree</Filter>
+    </ClCompile>
+    <ClCompile Include="RedBlackTree.cpp">
+      <Filter>05. Tree\04. RedBlackTree</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

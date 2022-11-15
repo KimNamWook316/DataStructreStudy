@@ -43,7 +43,7 @@ public:
 
 	CBinaryNode* SearchRecursive(char Key);
 
-private:
+protected:
 	char m_Data;
 	CBinaryNode* m_Left;
 	CBinaryNode* m_Right;

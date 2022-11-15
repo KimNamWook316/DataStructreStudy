@@ -145,6 +145,10 @@
     <ClInclude Include="BinaryTree.h" />
     <ClInclude Include="BinSrchTree.h" />
     <ClInclude Include="BraketChecker.h" />
+    <ClInclude Include="CDLL.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClInclude>
     <ClInclude Include="CircleDeque.h" />
     <ClInclude Include="CircleQueue.h" />
     <ClInclude Include="DicRecord.h" />
@@ -155,7 +159,10 @@
     <ClInclude Include="LinkedQueue.h" />
     <ClInclude Include="LinkedStack.h" />
     <ClInclude Include="MaxHeap.h" />
+    <ClInclude Include="MinHeap.h" />
     <ClInclude Include="Node.h" />
+    <ClInclude Include="RedBlackNode.h" />
+    <ClInclude Include="RedBlackTree.h" />
     <ClInclude Include="ThreadBinaryTree.h" />
     <ClInclude Include="ThreadBTNode.h" />
   </ItemGroup>
@@ -165,6 +172,10 @@
     <ClCompile Include="BinaryTree.cpp" />
     <ClCompile Include="BinSrchTree.cpp" />
     <ClCompile Include="BraketChecker.cpp" />
+    <ClCompile Include="CDLL.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="CircleDeque.cpp" />
     <ClCompile Include="CircleQueue.cpp" />
     <ClCompile Include="DicRecord.cpp" />
@@ -176,7 +187,10 @@
     <ClCompile Include="LinkedStack.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="MaxHeap.cpp" />
+    <ClCompile Include="MinHeap.cpp" />
     <ClCompile Include="Node.cpp" />
+    <ClCompile Include="RedBlackNode.cpp" />
+    <ClCompile Include="RedBlackTree.cpp" />
     <ClCompile Include="ThreadBinaryTree.cpp" />
     <ClCompile Include="ThreadBTNode.cpp" />
   </ItemGroup>

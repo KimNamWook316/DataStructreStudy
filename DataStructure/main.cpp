@@ -1,4 +1,7 @@
 #include <iostream>
+#include <chrono>
+#define _CRTDBG_MAP_ALLOC
+#include <crtdbg.h>
 #include "ArrayStack.h"
 #include "LinkedStack.h"
 #include "CircleQueue.h"
@@ -11,6 +14,7 @@
 #include "BinSrchTree.h"
 #include "Dictionary.h":
 #include "MaxHeap.h"
+#include "RedBlackTree.h"
 
 void TestCircleDeque();
 void TestDoubleLinkedList();
@@ -20,10 +24,15 @@ void TestThreadBinaryTree();
 void TestBinarySearchTree();
 void TestDictionary();
 void TestHeap();
+void TestHeapSort();
+void TestRedBlackTree();
+void ProfileTime(void(*func)());
 
 int main()
 {
-	TestHeap();
+	// _CrtSetDbgFlag(_CRTDBG_ALLOC_MEM_DF | _CRTDBG_LEAK_CHECK_DF);
+
+	TestRedBlackTree();
 
 	return 0;
 }
@@ -367,4 +376,52 @@ void TestHeap()
 	heap.Remove();
 	heap.Remove();
 	heap.Display();
+}
+
+void TestHeapSort()
+{
+	CMaxHeap heap;
+
+	std::cout << "정렬 전 : ";
+	for (int i = 0; i < 100; ++i)
+	{
+		std::cout << i << " ";
+		heap.Insert(i);
+	}
+
+	std::cout << std::endl;
+
+	std::cout << "정렬 후 : ";
+	while (!heap.IsEmpty())
+	{
+		CHeapNode node = heap.Remove();
+		std::cout << node.GetKey() << " ";
+	}
+	std::cout << std::endl;
+}
+
+void TestRedBlackTree()
+{
+	RedBlackTree rb;
+	rb.Insert(20);
+	rb.Insert(10);
+	rb.Insert(50);
+	rb.Insert(30);
+	rb.Insert(80);
+	rb.Insert(40);
+	rb.Insert(35);
+	rb.Insert(25);
+}
+
+void ProfileTime(void(*func)())
+{
+	std::cout << "== 실행 시간 측정 == \n";
+
+	std::chrono::system_clock::time_point start = std::chrono::system_clock::now();
+
+	func();
+
+	std::chrono::duration<double> sec = std::chrono::system_clock::now() - start;
+	
+	std::cout << "실행 시간 : " << sec.count() << " Seconds\n";
 }
